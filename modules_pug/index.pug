@@ -6,5 +6,32 @@ html(lang="en")
         title Portafolio
     body
         header
+            .container
+                .container-logo Narvaez
+                nav.container-menu
+                    ul.list-items
+                        - const sections = ["Inicio","Servicios","Habilidades","Portafolio","Contacto"]
+                        - for(let index = 0; index<sections.length;index++)
+                            li.item-list 
+                                a(href="#") #{sections[index]}
         main
+            .container
+                section.section.home
+                    .container-banner
+                        h1 Narvaez Alexis
+                        h2 Diseñador web.
+                        p.text-banner  Tener una página web para tu negocio, marca personal es muy importante en la actualidad.
+                    .container-button
+                        a(href="#") ¡QUIERO UN PRESUPUESTO!
+                section.section.services
+                    .container-services
+                        - const services = ["Diseño Web","Desarrollo de appps","Bases de datos"]
+                        - const descriptions = ["Maquetacion web, y desarrollo con Javascript","Desarrollo de apps utilizado el leguaje mas popular actualemente","Diseño de bases de datos utlizando el gestor de bases de datos \"PostgreSQL\""]
+                        - for(let index = 0; index < services.length;index++)     
+                            .service
+                                h4.service-title #{services[index]}
+                                span.service-icon
+                                p.service-description #{descriptions[index]}
+
         footer
+            .container
