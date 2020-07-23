@@ -6,37 +6,50 @@ const gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoplefixer = require('gulp-autoprefixer'),
     pug = require('gulp-pug');
-/**
- *  Creamos la tarea en gulp para compilar SASS
- * "Nombre tarea",funcion a ejecutar
-*/
-gulp.task('sass', function () {
-    //Ruta a buscar los archivos
-    gulp.src('./modules_scss/**/*.scss')
-        .pipe(sass(
-            //Opciones para identitar el codigo
-            {
-                outputStyle: "expended"
-            }))
-        .pipe(autoplefixer())
-        .pipe(gulp.dest('./styles'))
-});
+const { watch } = require('gulp');
 
+const paths = {
+    pug: {
+        src: 'modules_pug/index.pug',
+        dest: './',
+        watch: './modules_pug/**/*.pug'
+    },
+    sass: {
+        src: 'modules_scss/**/*.scss',
+        dest: 'styles/',
+        watch: 'modules_scss/**/*.scss'
+    }
+
+}
 /**
  *Tarea para compilar pug 
  */
-gulp.task('pug', function () {
-    gulp.src('./modules_pug/index.pug')
+function compilePug() {
+    return gulp.src(paths.pug.src)
         .pipe(pug({
-            pretty:true
+            pretty: true
         }))
-        .pipe(gulp.dest('./'))
-})
+        .pipe(gulp.dest(paths.pug.dest))
+}
 
-/***
- *Tarea por defecto 
+/**
+ *Tarea para compilar sass 
  */
-gulp.task('default', function () {
-    gulp.watch('./modules_scss/**/*.scss',["sass"]);
-    gulp.watch('./modules_pug/**/*.pug',["pug"]);
-})
+
+function compileSass() {
+    return gulp.src(paths.sass.src)
+    .pipe(sass(
+        //Opciones para identitar el codigo
+        {
+            outputStyle: "expended"
+        }))
+    .pipe(autoplefixer())
+    .pipe(gulp.dest(paths.sass.dest))
+}
+
+function watchCompile() {
+   watch(paths.pug.watch,compilePug) 
+   watch(paths.sass.watch,compileSass) 
+}
+
+exports.default = watchCompile
