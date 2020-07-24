@@ -24,14 +24,28 @@ html(lang="en")
                     .container-button
                         a(href="#") ¡QUIERO UN PRESUPUESTO!
                 section.section.services
+                    h2 Servicios
                     .container-services
-                        - const services = ["Diseño Web","Desarrollo de appps","Bases de datos"]
-                        - const descriptions = ["Maquetacion web, y desarrollo con Javascript","Desarrollo de apps utilizado el leguaje mas popular actualemente","Diseño de bases de datos utlizando el gestor de bases de datos \"PostgreSQL\""]
+                        - 
+                            const services = ["Diseño Web",
+                            "Desarrollo de appps",
+                            "Bases de datos"]
+                        - 
+                            const descriptions = ["Maquetacion web, y desarrollo con Javascript",
+                            "Desarrollo de apps utilizado el leguaje mas popular actualemente",
+                            "Diseño de bases de datos utlizando el gestor de bases de datos \"PostgreSQL\" "]
                         - for(let index = 0; index < services.length;index++)     
                             .service
                                 h4.service-title #{services[index]}
                                 span.service-icon
                                 p.service-description #{descriptions[index]}
-
+                section.section.skills
+                    h2 Habilidades
+                    .container-skills
+                        include skills
+                section.section.briefcase
+                    h2 Portafolio 
+                    .container-briefcase
+                        include gallery            
         footer
             .container

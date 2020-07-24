@@ -1,0 +1,37 @@
+-
+    const skills = [
+        {
+            name:'Java SE 11',
+            percentage: 65
+        },
+        {
+            name:'HTML',
+            percentage: 80
+        },
+        {
+            name:'CSS',
+            percentage: 80
+        },
+        {
+            name:'Javascript',
+            percentage: 25
+        },
+        {
+            name:'SQL (PostgreSQL)',
+            percentage: 20
+        },
+        {
+            name:'PUG (html)',
+            percentage: 30
+        },
+        {
+            name:'Sass (css)',
+            percentage: 60
+        }
+    ]
+- for (let i=0; i< skills.length; i++ )
+    .skill
+        h4= skills[i].name
+        .bar
+            .fill-bar
+        span.percentage= skills[i].percentage +'%'   
