@@ -3,6 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
         title Portafolio
     body
         header
@@ -39,13 +40,26 @@ html(lang="en")
                                 h4.service-title #{services[index]}
                                 span.service-icon
                                 p.service-description #{descriptions[index]}
-                section.section.skills
+                section.section.skills 
                     h2 Habilidades
                     .container-skills
                         include skills
                 section.section.briefcase
                     h2 Portafolio 
                     .container-briefcase
-                        include gallery            
+                        include gallery     
+                section.section.form
+                    form(action="").form-contact
+                        input(type="text" placeholder="Nombre:")
+                        input(type="email" placeholder="Correo:")
+                        textarea(name="comment")
+                        .container-buttons-form
+                            input(type="submit", value="Enviar")
+                            input(type="reset", value="Cancelar")
         footer
             .container
+                section.container-logo-footer
+                    h1 Alexis <br>Narvaez
+                section.container-social-media
+                    include social-media
+                       
