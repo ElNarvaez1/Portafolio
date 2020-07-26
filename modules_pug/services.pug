@@ -2,22 +2,23 @@
     const services =[
         {
             name:'Diseño Web',
-            icon:'',
+            icon:'fa fa-chrome',
             description:'Maquetacion web, y desarrollo con Javascript'
         },
         {
             name:'Desarrollo de appps',
-            icon:'',
+            icon:'fa fa-desktop',
             description:'Desarrollo de apps utilizado el leguaje mas popular actualemente'
         },
         {
-            name:'DBases de datos',
-            icon:'',
+            name:'Bases de datos',
+            icon:'fa fa-database',
             description:'Diseño de bases de datos utlizando el gestor de bases de datos \"PostgreSQL\" '
         },
     ]
 each service in services
     .service
         h4.service-title #{service.name}
-        span(class= service.icon)
+        span 
+            i(class= service.icon)
         p.service-description #{service.description}    

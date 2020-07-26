@@ -52,8 +52,15 @@
     text-align: center;
     align-self: flex-start;
     font-weight: 600; }
-  .section.services .service .span {
-    align-self: center; }
+  .section.services .service span {
+    align-self: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    font-size: 70px; }
   .section.services .service .service-description {
     width: 100%;
     align-self: flex-end; }
@@ -129,5 +136,41 @@
       width: calc( 100% / 2 - 20px);
       display: flex; }
     .section.form .container-form .form-contact textarea {
-      width: 100%;
+      min-width: 100%;
       height: 200px; }
+    .section.form .container-form .form-contact input, .section.form .container-form .form-contact textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 5px; }
+    .section.form .container-form .form-contact .container-buttons-form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; }
+    .section.form .container-form .form-contact input[type="submit"],
+    .section.form .container-form .form-contact input[type="reset"] {
+      border: none; }
+    .section.form .container-form .form-contact input[type="submit"] {
+      background: var(--color-button);
+      color: #fff;
+      font-weight: 700; }
+    .section.form .container-form .form-contact input[type="reset"] {
+      background: none; }
+
+/*  ---------- Section de Formulario -----------------------  */
+footer {
+  background: #000; }
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  color: #fff; }
+  footer .container li {
+    list-style: none; }
+    footer .container li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px; }
+      footer .container li a i {
+        margin-right: 10px; }

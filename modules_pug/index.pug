@@ -14,34 +14,35 @@ html(lang="en")
                     ul.list-items
                         - const sections = ["Inicio","Servicios","Habilidades","Portafolio","Contacto"]
                         - for(let index = 0; index<sections.length;index++)
-                            li.item-list 
-                                a(href="#").item #{sections[index]}
+                            li.item-list
+                                - let link = '#'+sections[index] 
+                                a(href= link).item #{sections[index]}
         main
             section.section.home
                 .container
                     .container-banner
-                        h1 Narvaez Alexis <br> Diseñador web.
+                        h1#Inicio Narvaez Alexis <br> Diseñador web.
                         p.text-banner  Tener una página web para tu negocio, marca personal... es muy importante en la actualidad.
                     .container-button
                         a(href="#").button-contac-me ¡QUIERO UN PRESUPUESTO!
             section.section.services
                 .container
-                    h2 Servicios
+                    h2#Servicios Servicios
                     .container-services   
                         include services        
             section.section.skills 
                 .container
-                    h2 Habilidades
+                    h2#Habilidades Habilidades
                     .container-skills
                         include skills
             section.section.briefcase
                 .container
-                    h2 Portafolio 
+                    h2#Portafolio Portafolio 
                     .container-briefcase
                         include gallery     
             section.section.form
                 .container
-                    h2 Contactame
+                    h2#Contacto Contactame
                     .container-form
                         form(action="").form-contact
                             input(type="text" placeholder="Nombre:")

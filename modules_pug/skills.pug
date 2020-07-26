@@ -33,5 +33,5 @@
     .skill
         h4= skills[i].name
         .bar
-            .fill-bar
+            .fill-bar(data-percentange= skills[i].percentage)
         span.percentage= skills[i].percentage +'%'   
