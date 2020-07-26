@@ -1,0 +1,27 @@
+header {
+  --item-height:56px; }
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height); }
+
+header .container-logo {
+  font-weight: 700;
+  font-size: 25px; }
+
+header .list-items {
+  display: flex; }
+
+header .item-list {
+  list-style: none; }
+
+header .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  height: var(--item-height);
+  text-decoration: none;
+  color: black; }

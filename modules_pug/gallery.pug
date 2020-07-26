@@ -10,5 +10,6 @@
         'img/69038878_107807990478866_5296475686597960828_n.jpg',
         'img/1366_2000vcb fx.jpg',
         'img/75523336_831267313942908_1016024196390265874_n.jpg']
-each path in pathsImg 
-    img.img-grid(src=path , alt=path)   
+each path,index in pathsImg 
+    div(class= ['container-img','cont'+index ])
+        img.img-grid(src= path , alt= path)

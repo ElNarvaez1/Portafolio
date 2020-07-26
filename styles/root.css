@@ -1,0 +1,21 @@
+/* Definimos los Colores que usaremos en toda la pagina web,
+   tamien nos traemos la fuente que usaremso 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+:root {
+  --color-banner:#D1D1D1;
+  --color-button:#425FF6;
+  --color-skill-fill:#8037FA;
+  --color-skill-backg:rgba(128,55,250,0.3);
+  --skill-height:30px;
+  --header-height:100px;
+  font-family: 'Open Sans',sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Esta linea es para que el cuepor suba 130px */
+main {
+  margin-top: calc(var(--header-height) * -1); }

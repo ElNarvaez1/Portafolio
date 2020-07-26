@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles/style.css"/>
     <title>Portafolio</title>
   </head>
   <body>
@@ -12,43 +13,46 @@
         <div class="container-logo">Narvaez</div>
         <nav class="container-menu">
           <ul class="list-items">
-            <li class="item-list"> <a href="#">Inicio</a></li>
-            <li class="item-list"> <a href="#">Servicios</a></li>
-            <li class="item-list"> <a href="#">Habilidades</a></li>
-            <li class="item-list"> <a href="#">Portafolio</a></li>
-            <li class="item-list"> <a href="#">Contacto</a></li>
+            <li class="item-list"> <a class="item" href="#">Inicio</a></li>
+            <li class="item-list"> <a class="item" href="#">Servicios</a></li>
+            <li class="item-list"> <a class="item" href="#">Habilidades</a></li>
+            <li class="item-list"> <a class="item" href="#">Portafolio</a></li>
+            <li class="item-list"> <a class="item" href="#">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="container">
-        <section class="section home">
+      <section class="section home">
+        <div class="container">
           <div class="container-banner">
-            <h1>Narvaez Alexis</h1>
-            <h2>Diseñador web.</h2>
-            <p class="text-banner"> Tener una página web para tu negocio, marca personal es muy importante en la actualidad.</p>
+            <h1>Narvaez Alexis <br> Diseñador web.</h1>
+            <p class="text-banner"> Tener una página web para tu negocio, marca personal... es muy importante en la actualidad.</p>
           </div>
-          <div class="container-button"><a href="#">¡QUIERO UN PRESUPUESTO!</a></div>
-        </section>
-        <section class="section services">
+          <div class="container-button"><a class="button-contac-me" href="#">¡QUIERO UN PRESUPUESTO!</a></div>
+        </div>
+      </section>
+      <section class="section services">
+        <div class="container">
           <h2>Servicios</h2>
-          <div class="container-services">
+          <div class="container-services">  
             <div class="service">
-              <h4 class="service-title">Diseño Web</h4><span class="service-icon"></span>
-              <p class="service-description">Maquetacion web, y desarrollo con Javascript</p>
+              <h4 class="service-title">Diseño Web</h4><span></span>
+              <p class="service-description">Maquetacion web, y desarrollo con Javascript    </p>
             </div>
             <div class="service">
-              <h4 class="service-title">Desarrollo de appps</h4><span class="service-icon"></span>
-              <p class="service-description">Desarrollo de apps utilizado el leguaje mas popular actualemente</p>
+              <h4 class="service-title">Desarrollo de appps</h4><span></span>
+              <p class="service-description">Desarrollo de apps utilizado el leguaje mas popular actualemente    </p>
             </div>
             <div class="service">
-              <h4 class="service-title">Bases de datos</h4><span class="service-icon"></span>
-              <p class="service-description">Diseño de bases de datos utlizando el gestor de bases de datos &quot;PostgreSQL&quot; </p>
+              <h4 class="service-title">DBases de datos</h4><span></span>
+              <p class="service-description">Diseño de bases de datos utlizando el gestor de bases de datos &quot;PostgreSQL&quot;     </p>
             </div>
           </div>
-        </section>
-        <section class="section skills"> 
+        </div>
+      </section>
+      <section class="section skills"> 
+        <div class="container">
           <h2>Habilidades</h2>
           <div class="container-skills">
             <div class="skill">
@@ -94,24 +98,41 @@
               </div><span class="percentage">60%</span>
             </div>
           </div>
-        </section>
-        <section class="section briefcase">
+        </div>
+      </section>
+      <section class="section briefcase">
+        <div class="container">
           <h2>Portafolio </h2>
-          <div class="container-briefcase"><img class="img-grid" src="img/1366_2000.jpg" alt="img/1366_2000.jpg"/><img class="img-grid" src="img/1366_2000vcb fx.jpg" alt="img/1366_2000vcb fx.jpg"/><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/><img class="img-grid" src="img/75285388_2497827903637744_7038377676502509464_n.jpg" alt="img/75285388_2497827903637744_7038377676502509464_n.jpg"/><img class="img-grid" src="img/75523336_831267313942908_1016024196390265874_n.jpg" alt="img/75523336_831267313942908_1016024196390265874_n.jpg"/><img class="img-grid" src="img/1366_2000.jpg" alt="img/1366_2000.jpg"/><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/><img class="img-grid" src="img/1366_2000vcb fx.jpg" alt="img/1366_2000vcb fx.jpg"/><img class="img-grid" src="img/75523336_831267313942908_1016024196390265874_n.jpg" alt="img/75523336_831267313942908_1016024196390265874_n.jpg"/>
+          <div class="container-briefcase">
+            <div class="container-img cont0"><img class="img-grid" src="img/1366_2000.jpg" alt="img/1366_2000.jpg"/></div>
+            <div class="container-img cont1"><img class="img-grid" src="img/1366_2000vcb fx.jpg" alt="img/1366_2000vcb fx.jpg"/></div>
+            <div class="container-img cont2"><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/></div>
+            <div class="container-img cont3"><img class="img-grid" src="img/75285388_2497827903637744_7038377676502509464_n.jpg" alt="img/75285388_2497827903637744_7038377676502509464_n.jpg"/></div>
+            <div class="container-img cont4"><img class="img-grid" src="img/75523336_831267313942908_1016024196390265874_n.jpg" alt="img/75523336_831267313942908_1016024196390265874_n.jpg"/></div>
+            <div class="container-img cont5"><img class="img-grid" src="img/1366_2000.jpg" alt="img/1366_2000.jpg"/></div>
+            <div class="container-img cont6"><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/></div>
+            <div class="container-img cont7"><img class="img-grid" src="img/69038878_107807990478866_5296475686597960828_n.jpg" alt="img/69038878_107807990478866_5296475686597960828_n.jpg"/></div>
+            <div class="container-img cont8"><img class="img-grid" src="img/1366_2000vcb fx.jpg" alt="img/1366_2000vcb fx.jpg"/></div>
+            <div class="container-img cont9"><img class="img-grid" src="img/75523336_831267313942908_1016024196390265874_n.jpg" alt="img/75523336_831267313942908_1016024196390265874_n.jpg"/></div>
           </div>
-        </section>
-        <section class="section form">
-          <form class="form-contact" action="">
-            <input type="text" placeholder="Nombre:"/>
-            <input type="email" placeholder="Correo:"/>
-            <textarea name="comment"></textarea>
-            <div class="container-buttons-form">
-              <input type="submit" value="Enviar"/>
-              <input type="reset" value="Cancelar"/>
-            </div>
-          </form>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section class="section form">
+        <div class="container">
+          <h2>Contactame</h2>
+          <div class="container-form">
+            <form class="form-contact" action="">
+              <input type="text" placeholder="Nombre:"/>
+              <input type="email" placeholder="Correo:"/>
+              <textarea name="comment"></textarea>
+              <div class="container-buttons-form">
+                <input type="submit" value="Enviar"/>
+                <input type="reset" value="Cancelar"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="container">

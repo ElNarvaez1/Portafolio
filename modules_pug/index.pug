@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+        link(rel="stylesheet", href="styles/style.css")
         title Portafolio
     body
         header
@@ -14,48 +15,41 @@ html(lang="en")
                         - const sections = ["Inicio","Servicios","Habilidades","Portafolio","Contacto"]
                         - for(let index = 0; index<sections.length;index++)
                             li.item-list 
-                                a(href="#") #{sections[index]}
+                                a(href="#").item #{sections[index]}
         main
-            .container
-                section.section.home
+            section.section.home
+                .container
                     .container-banner
-                        h1 Narvaez Alexis
-                        h2 Diseñador web.
-                        p.text-banner  Tener una página web para tu negocio, marca personal es muy importante en la actualidad.
+                        h1 Narvaez Alexis <br> Diseñador web.
+                        p.text-banner  Tener una página web para tu negocio, marca personal... es muy importante en la actualidad.
                     .container-button
-                        a(href="#") ¡QUIERO UN PRESUPUESTO!
-                section.section.services
+                        a(href="#").button-contac-me ¡QUIERO UN PRESUPUESTO!
+            section.section.services
+                .container
                     h2 Servicios
-                    .container-services
-                        - 
-                            const services = ["Diseño Web",
-                            "Desarrollo de appps",
-                            "Bases de datos"]
-                        - 
-                            const descriptions = ["Maquetacion web, y desarrollo con Javascript",
-                            "Desarrollo de apps utilizado el leguaje mas popular actualemente",
-                            "Diseño de bases de datos utlizando el gestor de bases de datos \"PostgreSQL\" "]
-                        - for(let index = 0; index < services.length;index++)     
-                            .service
-                                h4.service-title #{services[index]}
-                                span.service-icon
-                                p.service-description #{descriptions[index]}
-                section.section.skills 
+                    .container-services   
+                        include services        
+            section.section.skills 
+                .container
                     h2 Habilidades
                     .container-skills
                         include skills
-                section.section.briefcase
+            section.section.briefcase
+                .container
                     h2 Portafolio 
                     .container-briefcase
                         include gallery     
-                section.section.form
-                    form(action="").form-contact
-                        input(type="text" placeholder="Nombre:")
-                        input(type="email" placeholder="Correo:")
-                        textarea(name="comment")
-                        .container-buttons-form
-                            input(type="submit", value="Enviar")
-                            input(type="reset", value="Cancelar")
+            section.section.form
+                .container
+                    h2 Contactame
+                    .container-form
+                        form(action="").form-contact
+                            input(type="text" placeholder="Nombre:")
+                            input(type="email" placeholder="Correo:")
+                            textarea(name="comment")
+                            .container-buttons-form
+                                input(type="submit", value="Enviar")
+                                input(type="reset", value="Cancelar")
         footer
             .container
                 section.container-logo-footer

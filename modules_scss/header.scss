@@ -1,0 +1,29 @@
+@mixin boxCenter($jstCont){
+    display:flex;
+    justify-content:$jstCont ;
+    align-items: center;
+}
+header{
+    --item-height:56px;
+} 
+header .container{
+    @include boxCenter(space-between);
+    height: var(--header-height);
+}
+header .container-logo{
+    font-weight: 700;
+    font-size: 25px;
+}
+header .list-items{
+    display: flex;
+}
+header .item-list{
+    list-style: none;
+}
+header .item{
+    @include boxCenter(center);
+    padding: 0px 15px;
+    height:var(--item-height);
+    text-decoration: none;
+    color:black;
+}
